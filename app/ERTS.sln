@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErtsWebApp", "ErtsWebApp\ErtsWebApp.csproj", "{1202727D-62AD-4213-B477-24B43D95045E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErtsApplication", "ErtsApplication\ErtsApplication.csproj", "{8A56682F-7996-4DF5-B141-BEDDCE298354}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErtsModel", "ErtsModel\ErtsModel.csproj", "{0DF89E4B-2E9C-4E0A-91B5-A2C385BD1D6B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PandaScore.NET", "PandaScore.NET\PandaScore.NET\PandaScore.NET.csproj", "{AE63FD76-F916-421B-B753-EDF8EB431D17}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErtsApiFetcher", "ErtsApiFetcher\ErtsApiFetcher.csproj", "{5241698F-1B53-481C-8019-F3562BFAA0BD}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{432CE932-4BED-4EC9-9306-76F100CB2A0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1202727D-62AD-4213-B477-24B43D95045E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1202727D-62AD-4213-B477-24B43D95045E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1202727D-62AD-4213-B477-24B43D95045E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1202727D-62AD-4213-B477-24B43D95045E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A56682F-7996-4DF5-B141-BEDDCE298354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A56682F-7996-4DF5-B141-BEDDCE298354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A56682F-7996-4DF5-B141-BEDDCE298354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A56682F-7996-4DF5-B141-BEDDCE298354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DF89E4B-2E9C-4E0A-91B5-A2C385BD1D6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DF89E4B-2E9C-4E0A-91B5-A2C385BD1D6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DF89E4B-2E9C-4E0A-91B5-A2C385BD1D6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DF89E4B-2E9C-4E0A-91B5-A2C385BD1D6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE63FD76-F916-421B-B753-EDF8EB431D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE63FD76-F916-421B-B753-EDF8EB431D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE63FD76-F916-421B-B753-EDF8EB431D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE63FD76-F916-421B-B753-EDF8EB431D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5241698F-1B53-481C-8019-F3562BFAA0BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5241698F-1B53-481C-8019-F3562BFAA0BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5241698F-1B53-481C-8019-F3562BFAA0BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5241698F-1B53-481C-8019-F3562BFAA0BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{432CE932-4BED-4EC9-9306-76F100CB2A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{432CE932-4BED-4EC9-9306-76F100CB2A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{432CE932-4BED-4EC9-9306-76F100CB2A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{432CE932-4BED-4EC9-9306-76F100CB2A0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9DEFED5-D9F5-40F3-A650-299ACE319994}
+	EndGlobalSection
+EndGlobal

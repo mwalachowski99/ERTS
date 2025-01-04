@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>ErtsModel</AssemblyName>
+    <RootNamespace>ErtsModel</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Migrations\20210409125129_Init.cs" />
+    <Compile Include="Migrations\20210409125129_Init.Designer.cs" />
+    <Compile Include="Migrations\20210702130942_lolGamePlayerFixed.cs" />
+    <Compile Include="Migrations\20210702130942_lolGamePlayerFixed.Designer.cs" />
+    <Compile Include="Migrations\20210702131617_test.cs" />
+    <Compile Include="Migrations\20210702131617_test.Designer.cs" />
+    <Compile Include="Migrations\20210702143627_addGameTeamFakers.cs" />
+    <Compile Include="Migrations\20210702143627_addGameTeamFakers.Designer.cs" />
+    <Compile Include="Migrations\20210702144931_addGamePlayerItemFaker.cs" />
+    <Compile Include="Migrations\20210702144931_addGamePlayerItemFaker.Designer.cs" />
+    <Compile Include="Migrations\20210808151213_RenamedSeriesIntoMatch.cs" />
+    <Compile Include="Migrations\20210808151213_RenamedSeriesIntoMatch.Designer.cs" />
+    <Compile Include="Migrations\20210810193734_InhibitorDestroyedAdded.cs" />
+    <Compile Include="Migrations\20210810193734_InhibitorDestroyedAdded.Designer.cs" />
+    <Compile Include="Migrations\20210813190000_tournamentStats.cs" />
+    <Compile Include="Migrations\20210813190000_tournamentStats.Designer.cs" />
+    <Compile Include="Migrations\20210911141857_added series.cs" />
+    <Compile Include="Migrations\20210911141857_added series.Designer.cs" />
+    <Compile Include="Migrations\20210916184543_added apiIds.cs" />
+    <Compile Include="Migrations\20210916184543_added apiIds.Designer.cs" />
+    <Compile Include="Migrations\20210919200018_Edit_Tournament_Remove_PrizePool.cs" />
+    <Compile Include="Migrations\20210919200018_Edit_Tournament_Remove_PrizePool.Designer.cs" />
+    <Compile Include="Migrations\20210921161807_RemovedTeamIdFromPlayerConf.cs" />
+    <Compile Include="Migrations\20210921161807_RemovedTeamIdFromPlayerConf.Designer.cs" />
+    <Compile Include="Migrations\20210924181656_AddedApiIdToGame.cs" />
+    <Compile Include="Migrations\20210924181656_AddedApiIdToGame.Designer.cs" />
+    <Compile Include="Migrations\20211004163746_AddedNewFieldsToTournamentPlayer.cs" />
+    <Compile Include="Migrations\20211004163746_AddedNewFieldsToTournamentPlayer.Designer.cs" />
+    <Compile Include="Migrations\20211004171627_ChangedChampionsPlayedToInt.cs" />
+    <Compile Include="Migrations\20211004171627_ChangedChampionsPlayedToInt.Designer.cs" />
+    <Compile Include="Migrations\20211004172705_ChangedFieldsInTournamentPlayerIntoNullable.cs" />
+    <Compile Include="Migrations\20211004172705_ChangedFieldsInTournamentPlayerIntoNullable.Designer.cs" />
+    <Compile Include="Migrations\20211004174020_AddedAverageGoldEarnedToTournamentPlayer.cs" />
+    <Compile Include="Migrations\20211004174020_AddedAverageGoldEarnedToTournamentPlayer.Designer.cs" />
+    <Compile Include="Migrations\20211030182405_AddedTournamentTeams.cs" />
+    <Compile Include="Migrations\20211030182405_AddedTournamentTeams.Designer.cs" />
+    <Compile Include="Migrations\20211210153825_AddedNumberOfGames.cs" />
+    <Compile Include="Migrations\20211210153825_AddedNumberOfGames.Designer.cs" />
+    <Compile Include="Migrations\20211211150726_AddedOnDeleteTeam.cs" />
+    <Compile Include="Migrations\20211211150726_AddedOnDeleteTeam.Designer.cs" />
+    <Compile Include="Migrations\20211211163206_UndoLastChange.cs" />
+    <Compile Include="Migrations\20211211163206_UndoLastChange.Designer.cs" />
+    <Compile Include="Migrations\ErtsContextModelSnapshot.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="faker-csharp" Version="2.0.0" />
+    <PackageReference Include="Faker.Net" Version="1.4.108" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.2" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,1529 @@
+{
+  "x-generator": "NSwag v13.10.8.0 (NJsonSchema v10.3.11.0 (Newtonsoft.Json v12.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "ErtsWebApp",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/Game/GetLolGameStats/{gameId}": {
+      "get": {
+        "tags": [
+          "Game"
+        ],
+        "operationId": "Game_GetLolGameStats",
+        "parameters": [
+          {
+            "name": "gameId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "nullable": true,
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/LolGameFullStatsDto"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/League/GetLeague/{leagueId}": {
+      "get": {
+        "tags": [
+          "League"
+        ],
+        "operationId": "League_GetLeague",
+        "parameters": [
+          {
+            "name": "leagueId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "nullable": true,
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/LeagueDto"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/League/GetLeagueImages/{gameType}": {
+      "get": {
+        "tags": [
+          "League"
+        ],
+        "operationId": "League_GetLeagueImages",
+        "parameters": [
+          {
+            "name": "gameType",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "fragment",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "nullable": true,
+                  "items": {
+                    "$ref": "#/components/schemas/LeagueImageDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Match/GetMatches/{tournamentId}": {
+      "get": {
+        "tags": [
+          "Match"
+        ],
+        "operationId": "Match_GetMatches",
+        "parameters": [
+          {
+            "name": "tournamentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "nullable": true,
+                  "items": {
+                    "$ref": "#/components/schemas/MatchShortDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Match/GetMatch/{matchId}": {
+      "get": {
+        "tags": [
+          "Match"
+        ],
+        "operationId": "Match_GetMatch",
+        "parameters": [
+          {
+            "name": "matchId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "nullable": true,
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/MatchDto"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Serie/GetSeriesShort/{leagueId}": {
+      "get": {
+        "tags": [
+          "Serie"
+        ],
+        "operationId": "Serie_GetSeriesShort",
+        "parameters": [
+          {
+            "name": "leagueId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "nullable": true,
+                  "items": {
+                    "$ref": "#/components/schemas/SerieShortDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Team/GetTeam/{teamId}": {
+      "get": {
+        "tags": [
+          "Team"
+        ],
+        "operationId": "Team_GetTeam",
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "nullable": true,
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/TeamDto"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Team/GetTeamImages/{gameType}": {
+      "get": {
+        "tags": [
+          "Team"
+        ],
+        "operationId": "Team_GetTeamImages",
+        "parameters": [
+          {
+            "name": "gameType",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "fragment",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "nullable": true,
+                  "items": {
+                    "$ref": "#/components/schemas/TeamImageDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tournament/GetTournamentsShort/{serieId}": {
+      "get": {
+        "tags": [
+          "Tournament"
+        ],
+        "operationId": "Tournament_GetTournamentsShort",
+        "parameters": [
+          {
+            "name": "serieId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "nullable": true,
+                  "items": {
+                    "$ref": "#/components/schemas/TournamentShortDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tournament/GetTournamentTeamsShort/{tournamentId}": {
+      "get": {
+        "tags": [
+          "Tournament"
+        ],
+        "operationId": "Tournament_GetTournamentTeamsShort",
+        "parameters": [
+          {
+            "name": "tournamentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "nullable": true,
+                  "items": {
+                    "$ref": "#/components/schemas/TournamentTeamShortDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tournament/GetLolTournamentPlayerStats/{tournamentId}": {
+      "get": {
+        "tags": [
+          "Tournament"
+        ],
+        "operationId": "Tournament_GetLolTournamentPlayerStats",
+        "parameters": [
+          {
+            "name": "tournamentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "nullable": true,
+                  "items": {
+                    "$ref": "#/components/schemas/LolTournamentPlayerStatsDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tournament/GetLolTournamentTeamStats/{tournamentId}": {
+      "get": {
+        "tags": [
+          "Tournament"
+        ],
+        "operationId": "Tournament_GetLolTournamentTeamStats",
+        "parameters": [
+          {
+            "name": "tournamentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "nullable": true,
+                  "items": {
+                    "$ref": "#/components/schemas/LolTournamentTeamStatsDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "LolGameFullStatsDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "startTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "gameLength": {
+            "type": "string",
+            "nullable": true
+          },
+          "winnerTeamId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "blueTeamid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "blueTeamStats": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/LolGameTeamFullStatsDto"
+              }
+            ]
+          },
+          "redTeamStats": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/LolGameTeamFullStatsDto"
+              }
+            ]
+          },
+          "blueTeamPlayersStats": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LolGamePlayerFullStatsDto"
+            }
+          },
+          "redTeamPlayersStats": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LolGamePlayerFullStatsDto"
+            }
+          }
+        }
+      },
+      "LolGameTeamFullStatsDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "teamId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "baronKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mountainDrakeKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "infernalDrakeKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oceanDrakeKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cloudDrakeKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "elderDrakeKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "heraldKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "goldEarned": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kills": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "turretDestroyed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "inhibitorDestroyed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ban1ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban2ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban3ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban4ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban5ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "teamName": {
+            "type": "string",
+            "nullable": true
+          },
+          "teamImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstBaron": {
+            "type": "boolean"
+          },
+          "firstDragon": {
+            "type": "boolean"
+          },
+          "firstBlood": {
+            "type": "boolean"
+          },
+          "firstInhibitor": {
+            "type": "boolean"
+          },
+          "firstTurret": {
+            "type": "boolean"
+          }
+        }
+      },
+      "LolGamePlayerFullStatsDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "teamId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "playerNick": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "$ref": "#/components/schemas/LolRole"
+          },
+          "championImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "kills": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "deaths": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "assists": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "goldEarned": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cs": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "spell1ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "spell2ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemImages": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "goldSpent": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "largestCriticalStrike": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "largestKillingSpree": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "largestMultiKill": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "level": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "magicDamageDealt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "magicDamageDealtToChamps": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "physicalDamageDealt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "physicalDamageDealtToChamps": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trueDamageDealt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trueDamageDealtToChamps": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "damageDealt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "damageDealtToChamps": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "damageTaken": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalHeal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalTimeCrowdControllDealt": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "wardsPlaced": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "wardsDestroyed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "turretsDestroyed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "inhibitorsDestroyed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "neutralMinionsKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "enemyNeutralMinionsKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstBlood": {
+            "type": "boolean"
+          },
+          "firstBloodAssist": {
+            "type": "boolean"
+          }
+        }
+      },
+      "LolRole": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "top",
+          "jun",
+          "mid",
+          "adc",
+          "sup",
+          "sub"
+        ],
+        "enum": [
+          "top",
+          "jun",
+          "mid",
+          "adc",
+          "sup",
+          "sub"
+        ]
+      },
+      "LeagueDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "LeagueImageDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "MatchShortDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "team1ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "team2ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "team1Acronym": {
+            "type": "string",
+            "nullable": true
+          },
+          "team2Acronym": {
+            "type": "string",
+            "nullable": true
+          },
+          "team1GamesWon": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "team2GamesWon": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "numberOfGames": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "MatchDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "team1Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "team2Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "team1Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "team2Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "streamUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "matchShortDto": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MatchShortDto"
+              }
+            ]
+          },
+          "games": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LolGameShortStatsDto"
+            }
+          }
+        }
+      },
+      "LolGameShortStatsDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "gameLength": {
+            "type": "string",
+            "nullable": true
+          },
+          "winnerTeamId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "blueTeamid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "blueTeamStats": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/LolGameTeamShortStatsDto"
+              }
+            ]
+          },
+          "redTeamStats": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/LolGameTeamShortStatsDto"
+              }
+            ]
+          },
+          "blueTeamPlayersStats": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LolGamePlayerShortStatsDto"
+            }
+          },
+          "redTeamPlayersStats": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/LolGamePlayerShortStatsDto"
+            }
+          }
+        }
+      },
+      "LolGameTeamShortStatsDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "teamId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "baronKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mountainDrakeKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "infernalDrakeKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oceanDrakeKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cloudDrakeKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "elderDrakeKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "heraldKilled": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "goldEarned": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kills": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "turretDestroyed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "inhibitorDestroyed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ban1ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban2ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban3ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban4ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "ban5ImageUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "LolGamePlayerShortStatsDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "teamId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "playerNick": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "$ref": "#/components/schemas/LolRole"
+          },
+          "championImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "kills": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "deaths": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "assists": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "goldEarned": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cs": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "spell1ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "spell2ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemImages": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "SerieShortDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        }
+      },
+      "TeamDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "gameType": {
+            "$ref": "#/components/schemas/GameType"
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "acronym": {
+            "type": "string",
+            "nullable": true
+          },
+          "players": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Player"
+            }
+          },
+          "lastMatches": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/TeamPastMatchDto"
+            }
+          },
+          "upcomingMatches": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/TeamUpcomingMatchDto"
+            }
+          }
+        }
+      },
+      "GameType": {
+        "type": "string",
+        "description": "",
+        "x-enumNames": [
+          "lol",
+          "csgo",
+          "valorant",
+          "overwatch",
+          "dota2",
+          "r6"
+        ],
+        "enum": [
+          "lol",
+          "csgo",
+          "valorant",
+          "overwatch",
+          "dota2",
+          "r6"
+        ]
+      },
+      "Player": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "nick": {
+            "type": "string",
+            "nullable": true
+          },
+          "nationality": {
+            "type": "string",
+            "nullable": true
+          },
+          "apiId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "TeamPastMatchDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "matchId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "team1ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "team2ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "team1Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "team2Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "team1GamesWon": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "team2GamesWon": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "leagueImageUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "TeamUpcomingMatchDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "matchId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "team1ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "team2ImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "team1Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "team2Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "leagueImageUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "TeamImageDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "TournamentShortDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        }
+      },
+      "TournamentTeamShortDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "matchesWon": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "matchesLost": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gamesWon": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gamesLost": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "teamName": {
+            "type": "string",
+            "nullable": true
+          },
+          "teamImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "teamId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "LolTournamentPlayerStatsDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "playerNick": {
+            "type": "string",
+            "nullable": true
+          },
+          "teamId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "teamImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "kills": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "deaths": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "assists": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "kda": {
+            "type": "string",
+            "nullable": true
+          },
+          "cs": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "csPerMinute": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "gold": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "goldPerMinute": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "damageShare": {
+            "type": "string",
+            "nullable": true
+          },
+          "killParticipation": {
+            "type": "string",
+            "nullable": true
+          },
+          "championsPlayed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstRecentChampionImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "secondRecentChampionImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "thirdRecentChampionImageUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "LolTournamentTeamStatsDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "teamId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "teamName": {
+            "type": "string",
+            "nullable": true
+          },
+          "teamImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "kills": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "assists": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "deaths": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "gold": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "dragons": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "heralds": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "barons": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "towers": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "firstRecentChampionImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "secondRecentChampionImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "thirdRecentChampionImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "fourthRecentChampionImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "fivethRecentChampionImageUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      }
+    }
+  }
+}
