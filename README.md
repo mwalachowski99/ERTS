@@ -77,10 +77,14 @@ The current version focuses on League of Legends statistics, but there are plans
 
 📄 [Read more](PracaInz_Wałachowski_S19541.pdf)
 
-## Screens from app
+## Screenshots
+### League list
 ![image](https://github.com/user-attachments/assets/16b27f0b-163f-4942-8c16-fb659c3fc6cd)
+### Tournament list
 ![image](https://github.com/user-attachments/assets/db5ed6d1-746c-4431-a77b-6541f9837151)
+### Players stats
 ![image](https://github.com/user-attachments/assets/84a23485-93fb-4085-ae01-6f10a8bdc5cb)
+### Game info
 ![image](https://github.com/user-attachments/assets/458b655c-aab1-45d8-a3ce-07147f402a47)
 
 
