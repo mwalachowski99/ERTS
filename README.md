@@ -49,19 +49,6 @@ The system consists of four main modules:
 
 ---
 
-## Screenshots
-
-### Main Page
-![Main Page](https://via.placeholder.com/800x400?text=Main+Page+Screenshot)
-
-### League List
-![League List](https://via.placeholder.com/800x400?text=League+List+Screenshot)
-
-### Match Statistics
-![Match Statistics](https://via.placeholder.com/800x400?text=Match+Statistics+Screenshot)
-
----
-
 ## Development and Future Plans
 
 The current version focuses on League of Legends statistics, but there are plans to expand support for detailed data for other games. The system will be developed with new data types and views.
